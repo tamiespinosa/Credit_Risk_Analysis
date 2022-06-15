@@ -8,7 +8,7 @@
 
 ## <a name="OverviewProject"></a>Overview of Project
 
- [[1]](#1)  [[2]](#2) [[3]](#3).
+We will be creating different models to evaluate credit risk from a group of data [[3]](#3). Given that applicants that are risky are significantly less than safe loans, we will be using different models with unbalanced classes. We will oversample, undersample, use a combination of both [[1]](#1) in addition to using other models such as random forests and ensemble learning [[2]](#2). We will evaluate which model or models give us more accurate results.
 
 ## <a name="Results"></a>Results
 
