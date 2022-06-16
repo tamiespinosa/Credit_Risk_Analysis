@@ -34,7 +34,7 @@ In the random oversampling the model picked data from the already excisting high
 
   * **Counter** - Low risk 51,366 applicants & high risk 51,366 applicants.
   * **Balanced Accuracy Score** - 65.74%.
-  * **Confusion Matrix** -  72 accurately predicted high risk, 26 inaccurately preducted high risk
+  * **Confusion Matrix** -  72 accurately predicted high risk, 29 inaccurately preducted high risk
   * **Classification Report** -  1%  high risk prescicion, 71% recall, 2% f1 score.  
 
 In this case a small percentage of the values predicted to be high risk are actually high risk. Yet of the samples that were actually high risk 71% were accurately predicted to be so. 
@@ -51,6 +51,11 @@ In this case a small percentage of the values predicted to be high risk are actu
 
 #### <a name="SMOTE"></a>SMOTE Oversampling
 
+  * **Counter** - Low risk 51,366 applicants & high risk 51,366 applicants.
+  * **Balanced Accuracy Score** - 66.22%.
+  * **Confusion Matrix** -  64 accurately predicted high risk, 37 inaccurately preducted high risk
+  * **Classification Report** -  1%  high risk prescicion, 63% recall, 2% f1 score.  
+
 <p align="center"> <img src="Resources/SmoteOversampling/BalancedAccuracyScore.png" width ="30%" alt="BalancedAccuracyScore"> </p>
 <p align="center"> Figure 4: SMOTE Oversampling Balanced Accuracy Score</p> 
 
@@ -63,6 +68,11 @@ In this case a small percentage of the values predicted to be high risk are actu
 
 #### <a name="US"></a>Undersampling
 
+  * **Counter** - Low risk 246 applicants & high risk 246 applicants.
+  * **Balanced Accuracy Score** - 54.42%.
+  * **Confusion Matrix** -  70 accurately predicted high risk, 31 inaccurately preducted high risk
+  * **Classification Report** -  1%  high risk prescicion, 69% recall, 2% f1 score.  
+
 <p align="center"> <img src="Resources/Undersampling/BalancedAccuracyScore.png" width ="30%" alt="BalancedAccuracyScore"> </p>
 <p align="center"> Figure 7: Undersampling Balanced Accuracy Score</p> 
 
@@ -73,6 +83,11 @@ In this case a small percentage of the values predicted to be high risk are actu
 <p align="center"> Figure 9: Unersampling Classification Report Imbalanced</p> 
 
 #### <a name="COMB"></a>Combination of Oversampling and Undersampling
+
+  * **Counter** - Low risk 68,430 applicants & high risk 68,460 applicants.
+  * **Balanced Accuracy Score** - 64.47%.
+  * **Confusion Matrix** -  73 accurately predicted high risk, 28 inaccurately preducted high risk
+  * **Classification Report** -  1%  high risk prescicion, 72% recall, 2% f1 score.  
 
 <p align="center"> <img src="Resources/CombinationSampling/BalancedAccuracyScore.png" width ="30%" alt="BalancedAccuracyScore"> </p>
 <p align="center"> Figure 10: Combination Sampling Balanced Accuracy Score</p> 
@@ -90,6 +105,10 @@ In this subsection we will be evaluating boostrapping and Random Forest [[2]](#2
 
 #### <a name="BRF"></a>Balanced Random Forest
 
+  * **Balanced Accuracy Score** - 78.85%.
+  * **Confusion Matrix** -  71 accurately predicted high risk, 30 inaccurately preducted high risk
+  * **Classification Report** -  3%  high risk prescicion, 70% recall, 6% f1 score.  
+
 <p align="center"> <img src="Resources/BalancedRandomForest/BalancedAccuracyScore.png" width ="30%" alt="BalancedAccuracyScore"> </p>
 <p align="center"> Figure 13: Balanced Random Forest Balanced Accuracy Score</p> 
 
@@ -103,6 +122,10 @@ In this subsection we will be evaluating boostrapping and Random Forest [[2]](#2
 <p align="center"> Figure 16: Balanced Random Forest Feature Importances</p> 
 
 #### <a name="BRFS"></a>Balanced Random Forest Scaled
+
+  * **Balanced Accuracy Score** - 78.85%.
+  * **Confusion Matrix** -  71 accurately predicted high risk, 30 inaccurately preducted high risk
+  * **Classification Report** -  3%  high risk prescicion, 70% recall, 6% f1 score.  
 
 <p align="center"> <img src="Resources/BalancedRandomForestScaled/BalancedAccuracyScore.png" width ="30%" alt="BalancedAccuracyScore"> </p>
 <p align="center"> Figure 17: Balanced Random Forest Scaled Balanced Accuracy Score</p> 
