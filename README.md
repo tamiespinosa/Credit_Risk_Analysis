@@ -30,13 +30,12 @@ In this subsection we will be evaluating the differences between oversampling, u
 
 #### <a name="RO"></a>Random Oversampling
 
-In the random oversampling the model picked data from the already excisting high risk applicant data, and created extra entries of it. We ended up with 51,366 low-risk applicants and 51,366 high risk applicants. 
-
   * **Counter** - Low risk 51,366 applicants & high risk 51,366 applicants.
   * **Balanced Accuracy Score** - 65.74%.
   * **Confusion Matrix** -  72 accurately predicted high risk, 29 inaccurately preducted high risk
   * **Classification Report** -  1%  high risk prescicion, 71% recall, 2% f1 score.  
 
+In the random oversampling the model picked data from the already excisting high risk applicant data, and created extra entries of it. We ended up with 51,366 low-risk applicants and 51,366 high risk applicants. 
 In this case a small percentage of the values predicted to be high risk are actually high risk. Yet of the samples that were actually high risk 71% were accurately predicted to be so. 
 
 <p align="center"> <img src="Resources/RandomOverSampler/BalancedAccuracyScore.png" width ="30%" alt="BalancedAccuracyScore"> </p>
