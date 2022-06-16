@@ -26,8 +26,18 @@ We will be creating different models to evaluate credit risk from a group of dat
 
 ### <a name="RCI"></a>Resolving Class Imbalances Models
 
+In this subsection we will be evaluating the differences between oversampling, using SMOTE for oversampling, undersampling and using a combination of them [[1]](#1). Out data consists of 68,470 low-risk applicants and 347 high-risk applicants.  Given this, we will be mainly evaluating the model's performance with predicting high-risk applications.  
 
 #### <a name="RO"></a>Random Oversampling
+
+In the random oversampling the model picked data from the already excisting high risk applicant data, and created extra entries of it. We ended up with 51,366 low-risk applicants and 51,366 high risk applicants. 
+
+  * **Counter** - Low risk 51,366 applicants & high risk 51,366 applicants.
+  * **Balanced Accuracy Score** - 65.74%.
+  * **Confusion Matrix** -  72 accurately predicted high risk, 26 inaccurately preducted high risk
+  * **Classification Report** -  1%  high risk prescicion, 71% recall, 2% f1 score.  
+
+In this case a small percentage of the values predicted to be high risk are actually high risk. Yet of the samples that were actually high risk 71% were accurately predicted to be so. 
 
 <p align="center"> <img src="Resources/RandomOverSampler/BalancedAccuracyScore.png" width ="30%" alt="BalancedAccuracyScore"> </p>
 <p align="center"> Figure 1: Random Oversampling Balanced Accuracy Score</p> 
@@ -130,7 +140,7 @@ We will be creating different models to evaluate credit risk from a group of dat
 
 ## <a name="Summary"></a> Summary
 
-
+In this case, we prefer models with higher recall percentages for the high-risk population than having good prescicion. It is better to incorrectly label low risk participants as high risk, and have further evaluation for them than to innacurately approve credit for people that are high risk with their credit. From the models addressing the class imbalances we see that the combination sampling has the best high risk recall with 72%, yet compared to the other models it does not perform as well with the low risk recall. 
 
 ## <a name="Resources"></a>Resources
 
