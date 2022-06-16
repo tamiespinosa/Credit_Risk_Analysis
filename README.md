@@ -8,7 +8,7 @@
     - [SMOTE Oversampling](#SMOTE)
     - [Undersampling](#US)
     - [Combiation of Oversampling and Undersampling](#COMB)
-  * [Random Forest and Bootstrapping Models](#RFC)
+  * [Classifier](#RFC)
     - [Balanced Random Forest](#BRF)
     - [Balanced Random Forest Scaled](#BRFS)
     - [Easy Ensemble](#EE)
@@ -83,7 +83,10 @@ In this case a small percentage of the values predicted to be high risk are actu
 <p align="center"> <img src="Resources/CombinationSampling/ClassificationReportImbalanced.png" width ="70%" alt="ClassificationReportImbalanced"> </p>
 <p align="center"> Figure 12: Combination Sampling Classification Report Imbalanced</p> 
 
-### <a name="RFC"></a>Random Forest and Bootstrapping Models
+### <a name="RFC"></a>Classifier Models
+
+In this subsection we will be evaluating boostrapping and Random Forest [[2]](#2). Out data consists of 68,470 low-risk applicants and 347 high-risk applicants.  Given this, we will be mainly evaluating the model's performance with predicting high-risk applications.  
+
 
 #### <a name="BRF"></a>Balanced Random Forest
 
@@ -140,7 +143,11 @@ In this case a small percentage of the values predicted to be high risk are actu
 
 ## <a name="Summary"></a> Summary
 
-In this case, we prefer models with higher recall percentages for the high-risk population than having good prescicion. It is better to incorrectly label low risk participants as high risk, and have further evaluation for them than to innacurately approve credit for people that are high risk with their credit. From the models addressing the class imbalances we see that the combination sampling has the best high risk recall with 72%, yet compared to the other models it does not perform as well with the low risk recall. 
+In this case, we prefer models with higher recall percentages for the high-risk population than having good prescicion. It is better to incorrectly label low risk participants as high risk, and have further evaluation for them than to innacurately approve credit for people that are high risk with their credit.
+
+From the models addressing the class imbalances we see that the combination sampling has the best high risk recall with 72%, yet compared to the other models it does not perform as well with the low risk recall having labeled 28 entries as false low risk cases. The random oversampling in this case has 71% of high risk recall (29 false low risk cases), yet the number of false high risk cases is 600 less than the one for the combination sampling. It would take additional resources to make the false risk cases be cleared as low risk. So in this case from the class imbalance models, the random oversampling is the most accurate. 
+
+Overall the classifier models perform better than the ones addressing the sample size. Of those, the Easy Ensemble AdaBoost Classifier performs the best predicting the high risk cases. I ran the same models with scaled data and yet those models did not perform better than the ones ran with the original data sets. Although you could suspect that this could be due to overfitting, we would not be able to prove that to be the case without running a different set of data.
 
 ## <a name="Resources"></a>Resources
 
