@@ -3,6 +3,17 @@
 ## Table of Contents
 - [Overview of Project](#OverviewProject)
 - [Results](#Results)
+  * [Resolving Class Imbalance Models](#RCI)
+    - [Random Oversampling](#RO)
+    - [SMOTE Oversampling](#SMOTE)
+    - [Undersampling](#US)
+    - [Combiation of Oversampling and Undersampling](#COMB)
+  * [Random Forrest and Bootstrapping Models](#RFC)
+    - [Balanced Random Forrest](#BRF)
+    - [Balanced Random Forrest Scaled](#BRFS)
+    - [Easy Ensemble](#EE)
+    - [Easy Ensemble Scaled](#EES)
+
 - [Summary](#Summary)
 - [Resources](#Resources)
 
@@ -12,6 +23,26 @@ We will be creating different models to evaluate credit risk from a group of dat
 
 ## <a name="Results"></a>Results
 
+### <a name="RCI"></a>Resolving Class Imbalances mODELS
+
+#### <a name="RO"></a>Random Oversampling
+
+#### <a name="SMOTE"></a>SMOTE Oversampling
+
+#### <a name="US"></a>Undersampling
+
+#### <a name="COMB"></a>Combination of Oversampling and Undersampling
+
+
+### <a name="RFC"></a>Random Forrest and Bootstrapping Models
+
+#### <a name="BRF"></a>Balanced Random Forrest
+
+#### <a name="BRFS"></a>Balanced Random Forrest Scaled
+
+#### <a name="EE"></a>Easy Ensemble
+
+#### <a name="EES"></a>Easy Ensemble Scaled
 
 ## <a name="Summary"></a> Summary
 
