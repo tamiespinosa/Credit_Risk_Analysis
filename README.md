@@ -106,7 +106,7 @@ In thecombination the model combined the undersampling and oversampling methods 
 
 ### <a name="RFC"></a>Classifier Models
 
-In this subsection we will be evaluating boostrapping and Random Forest [[2]](#2). Out data consists of 68,470 low-risk applicants and 347 high-risk applicants.  Given this, we will be mainly evaluating the model's performance with predicting high-risk applications.  
+In this subsection we will be evaluating boostrapping [[2]](#2). Out data consists of 68,470 low-risk applicants and 347 high-risk applicants.  Given this, we will be mainly evaluating the model's performance with predicting high-risk applications.  With the exceptions of the scaled models run, these models performed better than the ones used to address the class imbalance. 
 
 
 #### <a name="BRF"></a>Balanced Random Forest
@@ -114,6 +114,8 @@ In this subsection we will be evaluating boostrapping and Random Forest [[2]](#2
   * **Balanced Accuracy Score** - 78.85%.
   * **Confusion Matrix** -  71 accurately predicted high risk, 30 inaccurately preducted high risk
   * **Classification Report** -  3%  high risk prescicion, 70% recall, 6% f1 score.  
+
+This model randomly undersamples the model (as opposed to the random forest model) and uses bootstrapping to generate a model. We also evaluated which of the feature had the most weight, as seen in Figure 16.  
 
 <p align="center"> <img src="Resources/BalancedRandomForest/BalancedAccuracyScore.png" width ="30%" alt="BalancedAccuracyScore"> </p>
 <p align="center"> Figure 13: Balanced Random Forest Balanced Accuracy Score</p> 
@@ -132,6 +134,8 @@ In this subsection we will be evaluating boostrapping and Random Forest [[2]](#2
   * **Balanced Accuracy Score** - 50.0%.
   * **Confusion Matrix** -  101 accurately predicted high risk, 0 inaccurately preducted high risk
   * **Classification Report** -  1%  high risk prescicion, 100% recall, 1% f1 score.  
+
+This model did not predict any low risk applicants. We ran this model to understand the difference in bias in the original data set and this scaled data set. Yet something in this model is not working properly and of all the models it performed the worst. We will need to look further in our documentation and code to understand what happened in this model. This model will not be considered. 
 
 <p align="center"> <img src="Resources/BalancedRandomForestScaled/BalancedAccuracyScore.png" width ="30%" alt="BalancedAccuracyScore"> </p>
 <p align="center"> Figure 17: Balanced Random Forest Scaled Balanced Accuracy Score</p> 
@@ -153,6 +157,8 @@ In this subsection we will be evaluating boostrapping and Random Forest [[2]](#2
   * **Confusion Matrix** -  93 accurately predicted high risk, 8 inaccurately preducted high risk
   * **Classification Report** -  9%  high risk prescicion, 92% recall, 16% f1 score.  
 
+Easy ensemble adaboost classifier uses training in order to get the model to improve its predictions. This model performed the best in accuracy, and in its ability to predict high risk precision. Therefore this model is our pick. We could say that this model could potentially suffer from overfitting, but we would not know this to be true unless we run additional data sets. 
+
 <p align="center"> <img src="Resources/EasyEnsemble/BalancedAccuracyScore.png" width ="30%" alt="BalancedAccuracyScore"> </p>
 <p align="center"> Figure 21: Easy Ensemble Accuracy Score</p> 
 
@@ -167,6 +173,8 @@ In this subsection we will be evaluating boostrapping and Random Forest [[2]](#2
   * **Balanced Accuracy Score** - 61.5%.
   * **Confusion Matrix** -  57 accurately predicted high risk, 44 inaccurately preducted high risk
   * **Classification Report** -  1%  high risk prescicion, 56% recall, 2% f1 score.  
+
+Running the scaled data into the easy ensemble classifier did not improve the models performance. Therefore this model will not be considered. 
 
 <p align="center"> <img src="Resources/EasyEnsembleScaled/BalancedAccuracyScore.png" width ="30%" alt="BalancedAccuracyScore"> </p>
 <p align="center"> Figure 24: Easy Ensemble Scaled Balanced Accuracy Score</p> 
@@ -185,7 +193,7 @@ From the models addressing the class imbalances we see that the combination samp
 
 In the classifier models, we ran the models with scaled data as well as with the original data to understand their performance differences and biases. We found that the classifier models perform better with the original data sets. The balanced random forest performed particularly poorly with the scaled data, not predicting any data point as low risk. Although we would usually run the random forest with scaled data, we would have to do further documentation digging as to why the balanced forest works best with original data sets. 
 
-Overall the classifier models perform better than the ones addressing the sample size. Of those, the Easy Ensemble AdaBoost Classifier performs the best predicting the high risk cases. 
+Overall the classifier models perform better than the ones addressing the sample size. Of those, the Easy Ensemble AdaBoost Classifier performs the best predicting the high risk cases. There's a chance that this model could suffer from overfitting, but we wouldn't know this to be true untl we ran a different data set. At this point, Easy Ensemble AdaBoost Classifier is our pick.    
 
 ## <a name="Resources"></a>Resources
 
