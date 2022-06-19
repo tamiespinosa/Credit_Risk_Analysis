@@ -169,7 +169,9 @@ In this case, we prefer models with higher recall percentages for the high-risk 
 
 From the models addressing the class imbalances we see that the combination sampling has the best high risk recall with 72%, yet compared to the other models it does not perform as well with the low risk recall having labeled 28 entries as false low risk cases. The random oversampling in this case has 71% of high risk recall (29 false low risk cases), yet the number of false high risk cases is 600 less than the one for the combination sampling. It would take additional resources to make the false risk cases be cleared as low risk. So in this case from the class imbalance models, the random oversampling is the most accurate. 
 
-Overall the classifier models perform better than the ones addressing the sample size. Of those, the Easy Ensemble AdaBoost Classifier performs the best predicting the high risk cases. I ran the same models with scaled data and yet those models did not perform better than the ones ran with the original data sets. Although you could suspect that this could be due to overfitting, we would not be able to prove that to be the case without running a different set of data.
+In the classifier models, we ran the models with scaled data as well as with the original data to understand their performance differences and biases. We found that the classifier models perform better with the original data sets. The balanced random forest performed particularly poorly with the scaled data, not predicting any data point as low risk. Although we would usually run the random forest with scaled data, we would have to do further documentation digging as to why the balanced forest works best with original data sets. 
+
+Overall the classifier models perform better than the ones addressing the sample size. Of those, the Easy Ensemble AdaBoost Classifier performs the best predicting the high risk cases. 
 
 ## <a name="Resources"></a>Resources
 
