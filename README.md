@@ -122,9 +122,9 @@ In this subsection we will be evaluating boostrapping and Random Forest [[2]](#2
 
 #### <a name="BRFS"></a>Balanced Random Forest Scaled
 
-  * **Balanced Accuracy Score** - 78.85%.
-  * **Confusion Matrix** -  71 accurately predicted high risk, 30 inaccurately preducted high risk
-  * **Classification Report** -  3%  high risk prescicion, 70% recall, 6% f1 score.  
+  * **Balanced Accuracy Score** - 50.0%.
+  * **Confusion Matrix** -  101 accurately predicted high risk, 0 inaccurately preducted high risk
+  * **Classification Report** -  1%  high risk prescicion, 100% recall, 1% f1 score.  
 
 <p align="center"> <img src="Resources/BalancedRandomForestScaled/BalancedAccuracyScore.png" width ="30%" alt="BalancedAccuracyScore"> </p>
 <p align="center"> Figure 17: Balanced Random Forest Scaled Balanced Accuracy Score</p> 
@@ -142,6 +142,9 @@ In this subsection we will be evaluating boostrapping and Random Forest [[2]](#2
 
 #### <a name="EE"></a>Easy Ensemble
 
+  * **Balanced Accuracy Score** - 93.16%.
+  * **Confusion Matrix** -  93 accurately predicted high risk, 8 inaccurately preducted high risk
+  * **Classification Report** -  9%  high risk prescicion, 92% recall, 16% f1 score.  
 
 <p align="center"> <img src="Resources/EasyEnsemble/BalancedAccuracyScore.png" width ="30%" alt="BalancedAccuracyScore"> </p>
 <p align="center"> Figure 21: Easy Ensemble Accuracy Score</p> 
@@ -153,6 +156,10 @@ In this subsection we will be evaluating boostrapping and Random Forest [[2]](#2
 <p align="center"> Figure 23: Easy Ensemble Classification Report Imbalanced</p> 
 
 #### <a name="EES"></a>Easy Ensemble Scaled
+
+  * **Balanced Accuracy Score** - 61.5%.
+  * **Confusion Matrix** -  57 accurately predicted high risk, 44 inaccurately preducted high risk
+  * **Classification Report** -  1%  high risk prescicion, 56% recall, 2% f1 score.  
 
 <p align="center"> <img src="Resources/EasyEnsembleScaled/BalancedAccuracyScore.png" width ="30%" alt="BalancedAccuracyScore"> </p>
 <p align="center"> Figure 24: Easy Ensemble Scaled Balanced Accuracy Score</p> 
