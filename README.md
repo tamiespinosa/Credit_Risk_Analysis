@@ -26,7 +26,8 @@ We will be creating different models to evaluate credit risk from a group of dat
 
 ### <a name="RCI"></a>Resolving Class Imbalances Models
 
-In this subsection we will be evaluating the differences between oversampling, using SMOTE for oversampling, undersampling and using a combination of them [[1]](#1). Out data consists of 68,470 low-risk applicants and 347 high-risk applicants.  Given this, we will be mainly evaluating the model's performance with predicting high-risk applications.  
+In this subsection we will be evaluating the differences between oversampling, using SMOTE for oversampling, undersampling and using a combination of them [[1]](#1). Out data consists of 68,470 low-risk applicants and 347 high-risk applicants.  Given this, we will be mainly evaluating the model's performance with predicting high-risk applications.  To gather the low risk application predictions, look at the screenshots provided for each model. 
+* **Original Counter** - Low risk 68,470 applicants & high risk 347 applicants.
 
 #### <a name="RO"></a>Random Oversampling
 
@@ -35,8 +36,7 @@ In this subsection we will be evaluating the differences between oversampling, u
   * **Confusion Matrix** -  72 accurately predicted high risk, 29 inaccurately preducted high risk
   * **Classification Report** -  1%  high risk prescicion, 71% recall, 2% f1 score.  
 
-In the random oversampling the model picked data from the already excisting high risk applicant data, and created extra entries of it. We ended up with 51,366 low-risk applicants and 51,366 high risk applicants. 
-In this case a small percentage of the values predicted to be high risk are actually high risk. Yet of the samples that were actually high risk 71% were accurately predicted to be so. 
+In the random oversampling the model picked data from the already excisting high risk applicant data, and created extra entries of it. This is our picked model from the models as it had the best prediction when considering low and high risk data. 
 
 <p align="center"> <img src="Resources/RandomOverSampler/BalancedAccuracyScore.png" width ="30%" alt="BalancedAccuracyScore"> </p>
 <p align="center"> Figure 1: Random Oversampling Balanced Accuracy Score</p> 
@@ -55,6 +55,8 @@ In this case a small percentage of the values predicted to be high risk are actu
   * **Confusion Matrix** -  64 accurately predicted high risk, 37 inaccurately preducted high risk
   * **Classification Report** -  1%  high risk prescicion, 63% recall, 2% f1 score.  
 
+In the SMOTE overrsampling the model generated more data by creating random points close to the already exhisting points on the high risk applicant data.
+
 <p align="center"> <img src="Resources/SmoteOversampling/BalancedAccuracyScore.png" width ="30%" alt="BalancedAccuracyScore"> </p>
 <p align="center"> Figure 4: SMOTE Oversampling Balanced Accuracy Score</p> 
 
@@ -72,6 +74,8 @@ In this case a small percentage of the values predicted to be high risk are actu
   * **Confusion Matrix** -  70 accurately predicted high risk, 31 inaccurately preducted high risk
   * **Classification Report** -  1%  high risk prescicion, 69% recall, 2% f1 score.  
 
+In the Undersampling the model reduced the amount of entries for both the low risk and high risk data points. It did so by using clustering of centroids algorithm. Of the models addressing the class imbalance, this model performed the worst at predicting low risk applicants which could be contributed to the loss of data points for this class. 
+
 <p align="center"> <img src="Resources/Undersampling/BalancedAccuracyScore.png" width ="30%" alt="BalancedAccuracyScore"> </p>
 <p align="center"> Figure 7: Undersampling Balanced Accuracy Score</p> 
 
@@ -87,6 +91,9 @@ In this case a small percentage of the values predicted to be high risk are actu
   * **Balanced Accuracy Score** - 64.47%.
   * **Confusion Matrix** -  73 accurately predicted high risk, 28 inaccurately preducted high risk
   * **Classification Report** -  1%  high risk prescicion, 72% recall, 2% f1 score.  
+
+In thecombination the model combined the undersampling and oversampling methods using the SMOTEEN algorithm. This model had the best performance for the high risk application recall of the models addressing the class imbalance. Yet it suffered from a slight loss in the low risk recall when compared to the random oversampling model. Therefore this will not be our pick. 
+
 
 <p align="center"> <img src="Resources/CombinationSampling/BalancedAccuracyScore.png" width ="30%" alt="BalancedAccuracyScore"> </p>
 <p align="center"> Figure 10: Combination Sampling Balanced Accuracy Score</p> 
