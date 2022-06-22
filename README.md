@@ -197,9 +197,9 @@ Overall the classifier models perform better than the ones addressing the sample
 
 ## <a name="Resources"></a>Resources
 
-<a name="1">[1]</a> [Loan Credit Risk Resampling Code](https://github.com/tamiespinosa/Credit_Risk_Analysis/blob/11852332e1ce9a54f127814a186441e0cd2dcf5c/credit_risk_resampling.ipynb)
+<a name="1">[1]</a> [Loan Credit Risk Resampling Code](https://github.com/tamiespinosa/Credit_Risk_Analysis/blob/main/credit_risk_resampling.ipynb)
 
-<a name="2">[2]</a> [Loan Credit Risk Ensemble Code](https://github.com/tamiespinosa/Credit_Risk_Analysis/blob/11852332e1ce9a54f127814a186441e0cd2dcf5c/credit_risk_ensemble.ipynb)
+<a name="2">[2]</a> [Loan Credit Risk Ensemble Code](https://github.com/tamiespinosa/Credit_Risk_Analysis/blob/main/credit_risk_ensemble.ipynb)
 
 <a name="3">[3]</a> [Loan Data](https://github.com/tamiespinosa/Credit_Risk_Analysis/blob/11852332e1ce9a54f127814a186441e0cd2dcf5c/Resources/LoanStats_2019Q1.csv)
 
